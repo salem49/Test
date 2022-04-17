@@ -35,14 +35,16 @@ export class HeroService {
      const url = `${this.heroesUrl}/?id=${id}`;
      return this.http.get<Hero[]>(url)
        .pipe(
-         map(heroes => heroes[0]), // returns a {0|1} element array
+
+       map(heroes => heroes[0]), // returns a {0|1} element array
          tap(h => {
            const outcome = h ? 'fetched' : 'did not find';
-          this.log(`${outcome} hero id=${id}`);
+           this.log(`${outcome} hero id=${id}`);
          }),
          catchError(this.handleError<Hero>(`getHero id=${id}`))
       );
-  }
+   }
+
 
   /** GET hero by id. Will 404 if id not found */
   getHero(id: number): Observable<Hero> {
