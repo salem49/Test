@@ -17,9 +17,9 @@ export class HeroService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  constructor(
-    private http: HttpClient,
-    private messageService: MessageService) { }
+  // constructor(
+  //   private http: HttpClient,
+  //   private messageService: MessageService) { }
 
   /** GET heroes from the server */
   // getHeroes(): Observable<Hero[]> {
