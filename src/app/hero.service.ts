@@ -30,6 +30,7 @@ export class HeroService {
       );
   }
 
+
   // /** GET hero by id. Return `undefined` when id not found */
   //  getHeroNo404<Data>(id: number): Observable<Hero> {
   //    const url = `${this.heroesUrl}/?id=${id}`;
@@ -43,6 +44,7 @@ export class HeroService {
   //        catchError(this.handleError<Hero>(`getHero id=${id}`))
   //     );
   // }
+
 
   /** GET hero by id. Will 404 if id not found */
   getHero(id: number): Observable<Hero> {
